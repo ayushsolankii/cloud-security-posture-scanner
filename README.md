@@ -169,23 +169,17 @@ Public bucket → higher priority → fixed first.
       "fix_cost": 0.1,
       "priority_score": 153.48
     }
-  ],
-  "remediations": [
-    "Blocked public access on test-public-bucket-ayush"
-  ]
-}
-
 ---
 
-
-## CloudWatch Logs
+## 📋 CloudWatch Logs
 Scan completed at 2026-06-05T02:32:00.023773
 Total findings: 2
  - public_bucket: test-public-bucket-ayush (priority 304.5)
  - unencrypted_volume: vol-01339983fc3a2bfca (priority 153.48)
 Auto-remediations applied: 1
    ✓ Blocked public access on test-public-bucket-ayush
-
-
-
-Ayush Solanki  |  ayush.solanki.itims@gmail.com
+  ],
+  "remediations": [
+    "Blocked public access on test-public-bucket-ayush"
+  ]
+}

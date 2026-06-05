@@ -48,29 +48,8 @@ The scanner runs on AWS Lambda and can be scheduled (e.g., daily) to ensure cont
 ---
 
 ## 🏗️ Architecture
-┌─────────────────┐
-│ EventBridge │
-│ (daily cron) │
-└────────┬────────┘
-│ triggers
-▼
-┌─────────────────┐
-│ AWS Lambda │
-│ (Python 3.12) │
-└────────┬────────┘
-│
-┌────┴────┬──────────────┐
-▼ ▼ ▼
-┌───────┐ ┌───────┐ ┌──────────┐
-│ S3 │ │ EC2 │ │ CloudWatch│
-│ Scan │ │ Scan │ │ Logs │
-└───┬───┘ └───┬───┘ └─────┬────┘
-│ │ │
-▼ ▼ ▼
-┌────────────────────────────────┐
-│ Priority Scoring & Output │
-│ (JSON + CloudWatch logs) │
-└────────────────────────────────┘
+
+EventBridge (daily cron) → triggers → AWS Lambda → scans S3 & EC2 → logs to CloudWatch → returns JSON
 
 
 ---
@@ -195,6 +174,8 @@ Public bucket → higher priority → fixed first.
     "Blocked public access on test-public-bucket-ayush"
   ]
 }
+
+---
 
 
 ## CloudWatch Logs

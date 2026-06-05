@@ -18,9 +18,7 @@
 - [Deployment Guide](#deployment-guide)
 - [Code Explanation](#code-explanation)
 - [Example Output](#example-output)
-- [Testing Auto-Remediation](#testing-auto-remediation)
-- [Interview Q&A](#interview-qa)
-- [Future Improvements](#future-improvements)
+
 
 ---
 
